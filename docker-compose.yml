@@ -1,0 +1,8 @@
+services:
+  app:
+    image: takasehideki/zenoh_swest26_trial
+    volumes:
+      - .:/root/zenoh_swest26_trial
+    working_dir: /root/zenoh_swest26_trial
+    stdin_open: true
+    tty: true
