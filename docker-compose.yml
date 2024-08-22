@@ -5,6 +5,7 @@ services:
       - .:/root/zenoh_swest26_trial
     ports:
       - 4000:4000
+      - 7447:7447
     working_dir: /root/zenoh_swest26_trial
     stdin_open: true
     tty: true
