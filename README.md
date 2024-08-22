@@ -41,7 +41,7 @@ docker compose exec app bash
 
 Rust（[Zenohネイティブ実装](https://github.com/eclipse-zenoh/zenoh)），Python（[zenoh-python](https://github.com/eclipse-zenoh/zenoh-python)），Elixir（[Zenohex](https://github.com/biyooon-ex/zenohex)）でそれぞれ実装したZenohノードをPub/Subしてみます．
 
-ターミナル（ペイン）は合計７個立ち上げてください．
+ターミナル（ペイン）は合計７個立ち上げて，すべてのターミナルで `docker compose exec app bash` を実行してコンテナに入っておいてください．
 
 ### Rust版
 
@@ -149,3 +149,51 @@ iex()> ZenohElixir.Sub.main()
 ```
 
 IExを終了するには`Ctrl+C`を２回続けて入力してください．
+
+### Phoenixとの連携
+
+ZenohexのインストールされたPhoenixプロジェクトを実行し，各ノードのPub/Sub動作と連携させてみます．
+
+#### リポジトリのcloneとビルド
+
+Phoenix用のプロジェクトをcloneしてビルドします．
+コンテナ内で行ってください．
+
+```bash
+cd <this_dir>
+git clone -b swest26_demo https://github.com/biyooon-ex/zenohex_phoenix_demo
+cd zenohex_phoenix_demo
+mix setup
+mix compile
+```
+
+しばらく待って最後に以下のようなメッセージが表示されたら，ビルドに成功しています．
+
+```
+Compiling 16 files (.ex)
+Generated zenohex_phoenix_demo app
+```
+
+なお，本来はSubmodule化したほうが行儀も良いですが，作業ミスを防ぐためにこの方法としています．
+
+### Phoenixアプリの立ち上げと動作確認
+
+次のコマンドでPhoenixアプリを立ち上げます．
+
+```bash
+mix phx.server
+```
+
+Webブラウザで http://localhost:4000 を開いてください．
+
+下段の「subscribe」フィールドには，Pubノードから出版されたメッセージの購読結果が出力されていきます．
+
+上段の「Message:」フィールドに文字列を入力して「Publish」をクリックするとそれが出版されます．Subノードで購読できることを確認してみてください．
+
+### 後始末
+
+ここでハンズオンを終了する場合には，以下のコマンドでコンテナを終了しておきましょう（次のハンズオンにこのまま進む場合は実行する必要はありません）．
+
+```bash
+docker compose down
+```

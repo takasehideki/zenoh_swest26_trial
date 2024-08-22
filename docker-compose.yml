@@ -3,6 +3,8 @@ services:
     image: takasehideki/zenoh_swest26_trial
     volumes:
       - .:/root/zenoh_swest26_trial
+    ports:
+      - 4000:4000
     working_dir: /root/zenoh_swest26_trial
     stdin_open: true
     tty: true
