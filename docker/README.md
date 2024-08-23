@@ -3,17 +3,17 @@
 本ハンズオンのために用意したDocker環境についてまとめています．
 
 ビルド済みのDocker imageは下記で配布しています．  
-https://hub.docker.com/repository/docker/takasehideki/zenoh_swest26_trial
+https://hub.docker.com/r/takasehideki/zenoh_swest26_trial
 
 ## インストールされているツールとバージョン
 
-- Ubuntu 22.04 (base image)
+- base image: [hexpm/elixir:1.16.3-erlang-26.2.5.2-ubuntu-jammy-20240808](https://hub.docker.com/layers/hexpm/elixir/1.16.3-erlang-26.2.5.2-ubuntu-jammy-20240808/images/sha256-9b6fbcf459a054df2258f5cd5b7c5ed4b7bc40cc0b690b77409768bac69f413c?context=explore)
+  - Ubuntu 22.04
+  - Elixir 1.16.3-otp-26
+  - Erlang 26.2.5
 - Zenoh 0.11.0
 - Rust 1.80.1
 - Python 3.10.12
-- ASDF v0.14.0
-- Erlang 26.2.5
-- Elixir 1.16.3-otp-26
 
 ## 自前でのビルド方法
 
