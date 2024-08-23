@@ -1,6 +1,6 @@
 # zenoh_swest26_trial
 
-SWEST26で実施するハンズオンの進め方をまとめています．  
+本リポジトリでは，SWEST26で実施するハンズオンの内容とその実施方法をまとめています．  
 https://swest.toppers.jp/phx/event/program#s5b
   
 ```
@@ -8,6 +8,12 @@ SWEST26
 08/30(金) 13:50〜15:00 セッションs5b
 「すべてが #Zenoh になる　〜柔軟にして軽量〜」 
 ```
+
+## 目次
+
+- [環境準備](/docs/00preliminary.md)
+- [ハンズオン１：様々な言語でつなげる](/docs/1lang.md)
+- [ハンズオン２：IoTにつなげる](/docs/2iot.md)
 
 ## 本環境の使用方法
 
