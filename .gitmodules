@@ -1,0 +1,4 @@
+[submodule "zenohex_phoenix_demo"]
+	path = zenohex_phoenix_demo
+	url = https://github.com/biyooon-ex/zenohex_phoenix_demo
+	branch = swest26_demo
