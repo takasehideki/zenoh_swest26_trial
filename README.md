@@ -12,7 +12,7 @@ SWEST26
 ## 本環境の使用方法
 
 ハンズオンの実行環境はDockerで提供しています．
-Docker環境の詳細が気になる方は [docker/](/docker/) を参照してください．
+Docker環境の詳細が気になる方は [docs/01docker.md](/docs/01docker.md) を参照してください．
 
 ### コンテナの起動と終了
 
