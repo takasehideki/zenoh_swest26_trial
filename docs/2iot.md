@@ -12,7 +12,7 @@
 最下部にある "PlatformIO Toolbar" だけで様々な操作が行えます．各ボタンの説明は下記をご参照ください．  
 https://docs.platformio.org/en/latest/integration/ide/vscode.html#platformio-toolbar
 
-最下部 "PlatformIO Toolbar" の "Project Environment Switcher" の表示が `env:m5stack-cores3 (zenoh_pico)` となっていることを確認してください．
+最下部 "PlatformIO Toolbar" の "Project Environment Switcher" の表示が `Default (zenoh_pico)` となっていることを確認してください．
 
 ## ソースコードの編集
 
@@ -31,16 +31,15 @@ https://docs.platformio.org/en/latest/integration/ide/vscode.html#platformio-too
 
 最下部にある "PlatformIO Toolbar" の "Build" (レ点)をクリックするとプロジェクトをビルドできます．
 
-"TERMINAL" に下記のようなメッセージが表示されればビルドが成功しています（Environmentの列が `m5stack-cores3` となっていて設定が正しいことを確認してください）．
+"TERMINAL" に下記のようなメッセージが表示されればビルドが成功しています．
 
 ```
+Building .pio/build/m5stack-cores3/firmware.bin
+esptool.py v4.5.1
+Creating esp32s3 image...
+Merged 2 ELF sections
 Successfully created esp32s3 image.
-========================================================== [SUCCESS] Took 21.23 seconds ==========================================================
-
-Environment     Status    Duration
---------------  --------  ------------
-m5stack-cores3  SUCCESS   00:00:21.231
-========================================================== 1 succeeded in 00:00:21.231 ==========================================================
+================================================================ [SUCCESS] Took 22.17 seconds ================================================================
  *  Terminal will be reused by tasks, press any key to close it. 
 ```
 
@@ -53,14 +52,12 @@ M5Stack CoreS3とPCをUSBケーブルで接続します．
 "TERMINAL" に下記のようなメッセージが表示されれば書き込みが成功しています．
 
 ```
+Wrote 882416 bytes (570332 compressed) at 0x00010000 in 7.4 seconds (effective 956.2 kbit/s)...
+Hash of data verified.
+
 Leaving...
 Hard resetting via RTS pin...
-============================================ [SUCCESS] Took 19.52 seconds ============================================
-
-Environment     Status    Duration
---------------  --------  ------------
-m5stack-cores3  SUCCESS   00:00:19.517
-============================================ 1 succeeded in 00:00:19.517 ============================================
+======================================================= [SUCCESS] Took 19.33 seconds =======================================================
  *  Terminal will be reused by tasks, press any key to close it. 
 ```
 
