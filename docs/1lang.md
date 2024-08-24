@@ -43,12 +43,33 @@ docker compose exec app bash
 
 まずはそれぞれのノードをビルドしていきます．
 
-**ターミナル１**でRustのノードをビルドします．
+Pythonはビルド不要です，スクリプトだもの．
+
+**ターミナル３**でElixirのノードをビルドします．
+
+```bash
+cd zenoh_elixir
+mix deps.get
+mix compile
+```
+
+少し待って最後に以下のようなメッセージが表示されたら，ビルドに成功しています．
+
+```
+==> zenoh_elixir
+Compiling 3 files (.ex)
+Generated zenoh_elixir app
+```
+
+**ターミナル５**でRustのノードをビルドします．
 
 ```bash
 cd zenoh_native
 cargo build
 ```
+
+PCスペックによってはRustのビルドに相当の時間が掛かることがあります．
+その場合にはビルドはそのまま止めずに次のステップに進んでください．
 
 しばらく待って最後に以下のようなメッセージが表示されたら，ビルドに成功しています．
 
@@ -57,37 +78,13 @@ cargo build
     Finished `dev` profile [unoptimized + debuginfo] target(s) in 58.64s
 ```
 
-Pythonはビルド不要です，スクリプトだもの．
-
-**ターミナル５**でElixirのノードをビルドします．
-
-```bash
-cd zenoh_elixir
-mix deps.get
-mix compile
-```
-
-しばらく待って最後に以下のようなメッセージが表示されたら，ビルドに成功しています．
-
-```
-==> zenoh_elixir
-Compiling 3 files (.ex)
-Generated zenoh_elixir app
-```
-
 ## ノードの実行
 
 ### 購読ノード
 
 まずは購読ノードを実行していきます．
 
-**ターミナル１**でRustのノードを実行します．
-
-```bash
-./target/debug/sub
-```
-
-**ターミナル３**でPythonのノードを実行します．
+**ターミナル１**でPythonのノードを実行します．
 
 ```bash
 cd zenoh_python
@@ -97,38 +94,42 @@ python3 sub.py
 ElixirはIEx（専用のシェル）上で実行します．
 以降の`iex()>`はIEx上での実行コマンドを表します．
 
-**ターミナル５**でElixirのノードを実行します．
+**ターミナル３**でElixirのノードを実行します．
 
 ```bash
 iex -S mix
 iex()> ZenohElixir.Sub.main()
 ```
 
+**ターミナル５**で（ビルドが完了していたら）Rustのノードを実行します．
+
+```bash
+./target/debug/sub
+```
+
 ### 出版ノード
 
 次に出版ノードを実行していきます．
 
-**ターミナル２**でRustのノードを実行します．
-
-```bash
-./target/debug/pub
-```
-
-**ターミナル４**でPythonのノードを実行します．
+**ターミナル２**でPythonのノードを実行します．
 
 ```bash
 cd zenoh_python
 python3 pub.py
 ```
 
-ElixirはIEx（専用のシェル）上で実行します．
-以降の`iex()>`はIEx上での実行コマンドを表します．
-
-**ターミナル６**でElixirのノードを実行します．
+**ターミナル４**でElixirのノードをIEx上で実行します．
 
 ```bash
+cd zenoh_elixir
 iex -S mix
 iex()> ZenohElixir.Pub.main()
+```
+
+**ターミナル６**で（ビルドが完了していたら）Rustのノードを実行します．
+
+```bash
+./target/debug/pub
 ```
 
 さてどうでしょうか？うまくいごいているでしょうか？？
@@ -171,7 +172,7 @@ Webブラウザで http://localhost:4000 を開いてください．
 
 ここまでのアプリをいったん終了させておきましょう．
 
-RustとPythonのノードの終了は`Ctrl+C`です．  
+PythonとRustのノードの終了は`Ctrl+C`です．  
 ElixirのノードとPhoenixアプリを終了するには，IEx上で`Ctrl+C`を２回続けて入力します．
 
 Dockerコンテナは終了させる必要はありません．
