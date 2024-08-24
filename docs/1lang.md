@@ -177,4 +177,7 @@ ElixirのノードとPhoenixアプリを終了するには，IEx上で`Ctrl+C`�
 
 Dockerコンテナは終了させる必要はありません．
 
-[ハンズオン２](/docs/2iot.md)に進む
+## ナビゲーション
+
+- [ハンズオン２](/docs/2iot.md)に進む
+- [目次](/README.md#目次)に戻る

@@ -109,3 +109,5 @@ M5Stack下部のリセットボタンを押してください．
 exit   # コンテナから抜ける
 docker compose down
 ```
+
+おつかれさまでしたっ！Zenoh完全に理解したッ！！:D

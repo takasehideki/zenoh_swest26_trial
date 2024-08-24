@@ -88,3 +88,7 @@ VSCodeの「Extensions / 拡張機能」のウィンドウから「PlatformIO ID
 または，下記ページの「Install」をクリックしてインストールすることもできます．  
 https://marketplace.visualstudio.com/items?itemName=platformio.platformio-ide
 
+## ナビゲーション
+
+- [ハンズオン１](/docs/1lang.md)に進む
+- [目次](/README.md#目次)に戻る
