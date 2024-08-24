@@ -12,15 +12,15 @@
 最下部にある "PlatformIO Toolbar" だけで様々な操作が行えます．各ボタンの説明は下記をご参照ください．  
 https://docs.platformio.org/en/latest/integration/ide/vscode.html#platformio-toolbar
 
-最下部 "PlatformIO Toolbar" の "Project Environment Switcher" をクリックして， `env:m5stack-cores3` を選択してください．
+最下部 "PlatformIO Toolbar" の "Project Environment Switcher" の表示が `env:m5stack-cores3 (zenoh_pico)` となっていることを確認してください．
 
 ## ソースコードの編集
 
 `src/main.cpp` を開いて，次の2個所を編集します．
 
 - 13,14行目：WiFiアクセスポイントの設定
-  - SSIDとPASSは当日に案内します．
-  - 遠隔参加 or 自習されている方は，ご自身のPCと同じアクセスポイントの情報を記載してください．
+  - SSIDとPASSは会場では当日に案内します．
+  - 遠隔参加or自習されている方は，ご自身のPCと同じアクセスポイントの情報を記載してください．
 - 19行目：Zenohエンドポイントの設定
   - ご自身のPCが接続されているIPv4アドレスを調べて `tcp/192.168.xx.yy:7447` のように記述してください．
   - IPアドレスの調べ方
