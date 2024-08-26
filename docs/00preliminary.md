@@ -88,6 +88,54 @@ VSCodeの「Extensions / 拡張機能」のウィンドウから「PlatformIO ID
 または，下記ページの「Install」をクリックしてインストールすることもできます．  
 https://marketplace.visualstudio.com/items?itemName=platformio.platformio-ide
 
+## [追加] 環境構築の確認
+
+ここまでの手順が適切に完了しているかを確認する方法です．
+
+### Docker環境
+
+ターミナルを開いて下記を実行してください．
+
+```bash
+docker run -it --rm takasehideki/zenoh_swest26_trial /bin/bash
+```
+
+Dockerコンテナに入るはずです．
+その先で下記のように実行して，適切なツールとバージョンが動作することを確認してください．
+
+```bash
+root@fa66be0acb79:/# rustc --version 
+rustc 1.80.1 (3f5fd8dd4 2024-08-06)
+root@fa66be0acb79:/# python3 --version 
+Python 3.10.12
+root@fa66be0acb79:/# elixirc --version 
+Erlang/OTP 26 [erts-14.2.5.2] [source] [64-bit] [smp:10:10] [ds:10:10:10] [async-threads:1] [jit]
+
+Elixir 1.16.3 (compiled with Erlang/OTP 26)
+root@fa66be0acb79:/# zenohd --version 
+2024-08-26T04:07:20.023319Z  INFO main ThreadId(01) zenohd: zenohd v0.11.0 built with rustc 1.72.0 (5680fa18f 2023-08-23)
+zenohd v0.11.0 built with rustc 1.72.0 (5680fa18f 2023-08-23)
+```
+
+ちゃんといごいていたら `exit` でコンテナを終了してください．
+
+### VSCode
+
+VSCodeとPlatformIO IEDの拡張機能の動作確認を兼ねて，初期設定を行います．
+
+下記リポジトリを `clone` してください．
+
+```bash
+git clone https://github.com/m5stack/CoreS3-UserDemo
+```
+
+clone してきた上記のディレクトリを VSCode で開いてください．
+PCスペックや環境によっては相当の時間が掛かることがあるようです．
+
+しばらく待って，VSCodeの最下部にある Status Bar に下記のような “PlatformIO Toolbar” が表示されていることを確認してください．  
+https://docs.platformio.org/en/latest/integration/ide/vscode.html#platformio-toolbar
+
+
 ## ナビゲーション
 
 - [ハンズオン１](/docs/1lang.md)に進む
