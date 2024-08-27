@@ -50,10 +50,7 @@ void setup()
 {
   // Initialize Serial port
   Serial.begin(115200);
-  while (!Serial)
-  {
-    delay(1000);
-  }
+  delay(1000);
 
   // Initialize M5 Display
   auto cfg = M5.config();
