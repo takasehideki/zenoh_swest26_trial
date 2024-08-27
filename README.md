@@ -22,4 +22,4 @@ SWEST26（第26回 組込みシステム技術に関するサマーワークシ�
 
 - [環境準備](/docs/00preliminary.md)
 - [ハンズオン１：様々な言語でつなげる](/docs/1lang.md)
-- [ハンズオン２：IoTにつなげる](/docs/2iot.md)
+- [ハンズオン２：IoT的につなげる](/docs/2iot.md)
