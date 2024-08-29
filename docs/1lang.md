@@ -1,5 +1,3 @@
-**注：本リポジトリはまだ絶賛準備中であり，ハンズオン当日までに内容が更新されることがあります．当日を楽しみにお待ちください,,,;(**
-
 ## ハンズオン１：様々な言語でつなげる
 
 Rust（[Zenohネイティブ実装](https://github.com/eclipse-zenoh/zenoh)），Python（[zenoh-python](https://github.com/eclipse-zenoh/zenoh-python)），Elixir（[Zenohex](https://github.com/biyooon-ex/zenohex)）でそれぞれ実装したZenohノードを通信させてみます．

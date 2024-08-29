@@ -1,5 +1,3 @@
-**注：本リポジトリはまだ絶賛準備中であり，ハンズオン当日までに内容が更新されることがあります．当日を楽しみにお待ちください,,,;(**
-
 # ハンズオン２：IoT的につなげる
 
 組込みマイコン向けの[zenoh-pico](https://github.com/eclipse-zenoh/zenoh-pico)を用いて，前段のPhoenixアプリと繋げてみましょう！
@@ -108,3 +106,9 @@ docker compose down
 ```
 
 おつかれさまでしたっ！Zenoh完全に理解したッ！！:D
+
+## 補足など
+
+- がむばれば他のM5ボードでもできますが `platform.ini` の記述がいろいろ必要なことがあります（[こんな感じ](https://github.com/takasehideki/zenoh_d3ai_trial/blob/main/zenoh_pico/platformio.ini)）
+- zenohd (Zenoh router) は IP reachable であれば接続できます．でも今回はちょっとサボっています,,, ([こんな感じ](https://github.com/takasehideki/zenoh_swest26_trial/blob/main/docker-compose.yml#L8))
+- がむばれば Cloud VM とも連携可能です（[こんな感じ](https://github.com/takasehideki/zenoh_d3ai_trial?tab=readme-ov-file#communication-with-cloud)）
