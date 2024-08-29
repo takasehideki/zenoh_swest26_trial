@@ -1,13 +1,15 @@
 # zenoh_swest26_trial
 
 本リポジトリでは，SWEST26で実施するハンズオンの内容とその実施方法をまとめています．  
-https://swest.toppers.jp/phx/event/program#s5b
   
 ```
 SWEST26（第26回 組込みシステム技術に関するサマーワークショップ）
 08/30(金) 13:50〜15:00 セッションs5b
 「すべてが #Zenoh になる　〜柔軟にして軽量〜」 
 ```
+
+- セッション情報： https://swest.toppers.jp/phx/event/program#s5b
+- スライド： https://speakerdeck.com/takasehideki/swest26-20240830
 
 ## 案内・注意事項
 
