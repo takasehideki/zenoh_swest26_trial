@@ -19,6 +19,7 @@ https://docs.platformio.org/en/latest/integration/ide/vscode.html#platformio-too
 - 13,14行目：WiFiアクセスポイントの設定
   - SSIDとPASSは会場では当日に案内します．
   - 遠隔参加or自習されている方は，ご自身のPCと同じアクセスポイントの情報を記載してください．
+  - M5Stackマイコンボードの制約のため，2.4GHz帯で接続可能なSSIDを利用してください．5GHz帯では接続できません．可能であればバンドステアリング機能も無効化できるとよいです．
 - 19行目：Zenohエンドポイントの設定
   - ご自身のPCが接続されているIPv4アドレスを調べて `tcp/192.168.xx.yy:7447` のように記述してください．
   - IPアドレスの調べ方
@@ -40,6 +41,9 @@ Successfully created esp32s3 image.
 ================================================================ [SUCCESS] Took 22.17 seconds ================================================================
  *  Terminal will be reused by tasks, press any key to close it. 
 ```
+
+このとき `UnknownBoard: Unknown board ID 'm5stack-cores3'` のエラーが出る場合は，プロジェクトの依存関係に問題がある可能性があります（[参考](https://qiita.com/tichise/items/54def94e70134742e73a)）．
+"PlatformIO Toolbar" の "PlatformIO: New Terminal" をクリックしてターミナルを開き，そのターミナル上で `pio pkg update` のコマンドを実行して依存関係を更新してください．
 
 ## ボードへの書き込み
 
@@ -93,7 +97,7 @@ zenohd
 
 Webブラウザで http://localhost:4000 を開いてください．
 
-M5Stack下部のリセットボタンを押してください．  
+M5Stack CoreS3の底面にあるリセットボタンを押してください．  
 さてなにが起きるでしょう！信じるか信じないかは(ry
 
 ## 後始末

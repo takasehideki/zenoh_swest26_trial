@@ -4,7 +4,7 @@
   
 ```
 SWEST26（第26回 組込みシステム技術に関するサマーワークショップ）
-08/30(金) 13:50〜15:00 セッションs5b
+08/30(金) セッションs5b -> s2c
 「すべてが #Zenoh になる　〜柔軟にして軽量〜」 
 ```
 
@@ -13,9 +13,10 @@ SWEST26（第26回 組込みシステム技術に関するサマーワークシ�
 
 ## 案内・注意事項
 
-本セッションののハンズオンに参加予定の方は，事前に[環境準備](/docs/00preliminary.md)を進めておいてください．
 技術サポートや質問などはSWEST26参加者向けのSlackにて承ります．
+
 復習or自習な方は，X(旧Twitter)で [@takasehideki](https://twitter.com/takasehideki) にてDMなりMentionでお知らせください．
+本リポジトリの[Issues](https://github.com/takasehideki/zenoh_swest26_trial/issues)でのお知らせも大歓迎です．
 
 ## 目次
 
