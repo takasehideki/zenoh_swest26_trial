@@ -124,9 +124,10 @@ iex -S mix
 iex()> ZenohElixir.Pub.main()
 ```
 
-**ターミナル６**で（ビルドが完了していたら）Rustのノードを実行します．
+**ターミナル６**で（ターミナル３のビルドが完了していたら）Rustのノードを実行します．
 
 ```bash
+cd zenoh_native
 ./target/debug/pub
 ```
 
