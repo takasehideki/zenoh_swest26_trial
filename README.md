@@ -8,7 +8,7 @@ SWEST26（第26回 組込みシステム技術に関するサマーワークシ�
 「すべてが #Zenoh になる　〜柔軟にして軽量〜」 
 ```
 
-- [セッション情報](https://swest.toppers.jp/phx/event/program#s5b)
+- [セッション情報](https://swest.toppers.jp/SWEST26/program/#s5b)
 - [スライド](https://speakerdeck.com/takasehideki/swest26-20240830-a446f7ba-60a8-4fb5-9df9-21a20afce2bc)
 
 ## 案内・注意事項
