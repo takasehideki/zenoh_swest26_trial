@@ -10,19 +10,19 @@ RUN apt-get update && apt-get install -y \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 RUN if [ ${TARGETPLATFORM} = "linux/amd64" ]; then \
-	( wget https://github.com/eclipse-zenoh/zenoh/releases/download/${ZENOH_VER}/zenoh-${ZENOH_VER}-x86_64-unknown-linux-gnu-debian.zip -O /tmp/zenoh-pkgs.zip \
-	&& unzip /tmp/zenoh-pkgs.zip -d /tmp \
-	&& dpkg -i /tmp/zenoh*.deb \
-	&& rm -f /tmp/* \
-	) ; \
-	fi;
+  ( wget https://github.com/eclipse-zenoh/zenoh/releases/download/${ZENOH_VER}/zenoh-${ZENOH_VER}-x86_64-unknown-linux-gnu-debian.zip -O /tmp/zenoh-pkgs.zip \
+  && unzip /tmp/zenoh-pkgs.zip -d /tmp \
+  && dpkg -i /tmp/zenoh*.deb \
+  && rm -f /tmp/* \
+  ) ; \
+  fi;
 RUN if [ ${TARGETPLATFORM} = "linux/arm64" ]; then \
-	( wget https://github.com/eclipse-zenoh/zenoh/releases/download/${ZENOH_VER}/zenoh-${ZENOH_VER}-aarch64-unknown-linux-gnu-debian.zip -O /tmp/zenoh-pkgs.zip \
-	&& unzip /tmp/zenoh-pkgs.zip -d /tmp \
-	&& dpkg -i /tmp/zenoh*.deb \
-	&& rm -f /tmp/* \
-	) ; \
-	fi;
+  ( wget https://github.com/eclipse-zenoh/zenoh/releases/download/${ZENOH_VER}/zenoh-${ZENOH_VER}-aarch64-unknown-linux-gnu-debian.zip -O /tmp/zenoh-pkgs.zip \
+  && unzip /tmp/zenoh-pkgs.zip -d /tmp \
+  && dpkg -i /tmp/zenoh*.deb \
+  && rm -f /tmp/* \
+  ) ; \
+  fi;
 
 # Install Rust
 RUN apt-get update && apt-get install -y \
@@ -42,7 +42,7 @@ RUN pip install -U pip && \
 
 # Install for Phoenix app
 RUN apt-get update && apt-get install -y \
-	git inotify-tools \
+  git inotify-tools \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
